@@ -6,7 +6,18 @@ Setup notes:
 
 // Data: 12 example figures
 const figures = [
-  {id:1, title:'Bar Graph', href:'#', thumbnail:'assets/thumb-placeholder.svg', figureType:'Graph', functionPurpose:'Explanatory', topic:'Ecology, Physiology, Genetics', tags:['Bar Graph','Graph','Explanatory','Ecology','Physiology','Genetics']},
+  {
+    id:1,
+    title:'Bar Graph',
+    href:'#',
+    thumbnail:'assets/heart_rate_bargraph_final.png',
+    image:'assets/heart_rate_bargraph_final.png',
+    caption:'Mean heart rate under different exercise conditions. Created by Amal Shahzad, 2026. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.',
+    figureType:'Graph',
+    functionPurpose:'Explanatory',
+    topic:'Ecology, Physiology, Genetics',
+    tags:['Bar Graph','Graph','Explanatory','Ecology','Physiology','Genetics','Heart Rate','Exercise']
+  },
   {id:2, title:'Line Graph', href:'#', thumbnail:'assets/thumb-placeholder.svg', figureType:'Graph', functionPurpose:'Explanatory', topic:'Physiology, Ecology', tags:['Line Graph','Graph','Explanatory','Physiology','Ecology']},
   {id:3, title:'Scatter Plot', href:'#', thumbnail:'assets/thumb-placeholder.svg', figureType:'Graph', functionPurpose:'Explanatory', topic:'Ecology, Genetics', tags:['Scatter Plot','Graph','Explanatory','Ecology','Genetics']},
   {id:4, title:'Histogram', href:'#', thumbnail:'assets/thumb-placeholder.svg', figureType:'Graph', functionPurpose:'Explanatory', topic:'Genetics, Physiology', tags:['Histogram','Graph','Explanatory','Genetics','Physiology']},
@@ -15,7 +26,37 @@ const figures = [
   {id:7, title:'Muscle Contraction', href:'#', thumbnail:'assets/muscle-contraction-thumb.png', figureType:'Diagram', functionPurpose:'Explanatory', topic:'Physiology', tags:['Muscle Contraction','Diagram','Explanatory','Physiology'], image:'assets/muscle-contraction.png', caption:'Muscle contraction mechanism. Modified from DataBase Center for Life Science (DBCLS), <em>Mechanism of skeletal muscle contraction</em>, 2021. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.'},
   {id:8, title:'Negative Feedback Loop', href:'#', thumbnail:'assets/thumb-placeholder.svg', figureType:'Diagram', functionPurpose:'Explanatory', topic:'Physiology', tags:['Negative Feedback Loop','Diagram','Explanatory','Physiology','Feedback Loops']},
   {id:9, title:'Positive Feedback Loop', href:'#', thumbnail:'assets/thumb-placeholder.svg', figureType:'Diagram', functionPurpose:'Explanatory', topic:'Physiology', tags:['Positive Feedback Loop','Diagram','Explanatory','Physiology','Feedback Loops']},
-  {id:10, title:'Enzyme Kinetics Graph', href:'figures/enzyme-kinetics.html', thumbnail:'assets/thumb-placeholder.svg', figureType:'Graph', functionPurpose:'Explanatory', topic:'Physiology', tags:['Enzyme','Kinetics','Graph','Explanatory','Physiology']},
+  {
+    id:10,
+    title:'Calcium Homeostasis',
+    href:'#',
+    thumbnail:'assets/calcium-homeostasis.png',
+    image:'assets/calcium-homeostasis.png',
+    modalImageWidth:'86%',
+    caption:'Calcium homeostasis regulation pathway. OpenStax College, <em>625 Calcium Homeostasis</em>, 2013. Licensed under <a href="https://creativecommons.org/licenses/by/3.0/deed.en" target="_blank" rel="noopener">CC BY 3.0</a>.',
+    figureType:'Diagram',
+    functionPurpose:'Explanatory',
+    topic:'Physiology',
+    tags:['Calcium Homeostasis','Diagram','Explanatory','Physiology','Calcium'],
+    modalContent:{
+      whatIsThis:'This is a diagram illustrating calcium homeostasis, a fundamental regulatory mechanism in maintaining healthy calcium levels in the body.',
+      howToUnderstand:[
+        'Step 1 - Notice how this diagram is divided into two main sections, which represent deviations from the normal calcium level of 10 mg/dL (the baseline separating the two):',
+        '• The top half describes the pathway to regulate increased Ca²⁺ levels (+10 mg/dL).',
+        '• The bottom half describes the pathway to regulate decreased Ca²⁺ levels (-10 mg/dL).',
+        'Step 2 - Start from either pathway in the middle. For example, if I start from “decreased Ca²⁺ level” in the middle, my next step is to follow the thick, hot pink arrow that points to the light orange box. This arrow may be interpreted as a signal response to return calcium levels to homeostasis when a change is observed.',
+        'Step 3 - Then, follow the thinner black arrow, which points to another set of boxes. These arrows represent how one step triggers the next step. In our example, the release of PTH causes a chain reaction of calcium absorption in the kidneys and small intestine.',
+        'Step 4 - Another black arrow coming from the set of boxes points to another box that describes the final event in the regulatory pathway. In our example, the arrow shows how the release of calcium and its subsequent absorption/reabsorption increases Ca²⁺ level in blood until it is returned to homeostasis or the normal level.'
+      ],
+      quickFacts:[
+        'Thick and pink arrows symbolize signaling responses.',
+        'Thin and black arrows symbolize how one step triggers the next step.'
+      ],
+      misconceptionTitle:'"The decrease in Ca²⁺ reabsorption in the kidneys causes the Ca²⁺ level in blood to decrease."',
+      misconceptionWrongHtml:'<strong>WRONG!</strong> Both osteoclast activity inhibition and a decrease in Ca²⁺ reabsorption in kidneys are responsible.',
+      misconceptionDetail:'The black arrow pointing from "Ca²⁺ reabsorption in the kidneys decreases" to "Ca²⁺ level in blood decreases" might cause this confusion. Remember that the arrow symbolizes that BOTH mechanisms contribute to reduction in Ca²⁺ in blood.'
+    }
+  },
   {id:11, title:'Bacterial Culture Photo', href:'figures/bacterial-culture.html', thumbnail:'assets/thumb-placeholder.svg', figureType:'Photo', functionPurpose:'Illustrative', topic:'Microbiology', tags:['Bacterial','Culture','Photo','Illustrative','Microbiology']},
   {id:12, title:'Ecosystem Hierarchy', href:'figures/ecosystem-hierarchy.html', thumbnail:'assets/thumb-placeholder.svg', figureType:'Diagram', functionPurpose:'Organizational', topic:'Ecology', tags:['Ecosystem','Hierarchy','Diagram','Organizational','Ecology']}
 ];
@@ -65,9 +106,11 @@ function renderCards(items){
       const img = document.createElement('img');
       img.src = item.thumbnail;
       img.alt = item.title + ' thumbnail';
-      img.style.maxWidth = '100%';
-      img.style.height = '100%';
-      img.style.objectFit = 'cover';
+      img.style.maxWidth = '94%';
+      img.style.maxHeight = '94%';
+      img.style.width = 'auto';
+      img.style.height = 'auto';
+      img.style.objectFit = 'contain';
       thumb.appendChild(img);
     }
 
@@ -326,6 +369,7 @@ function openModal(card) {
   // For Muscle Contraction, this will use: assets/muscle-contraction.png
   modalImage.src = figure.image || 'assets/placeholder.png';
   modalImage.alt = `${figure.title} figure`;
+  modalImage.style.width = figure.modalImageWidth || '';
 
   // Caption: set the figure caption if available
   if (modalCaption) {
