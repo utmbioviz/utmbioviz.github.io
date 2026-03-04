@@ -21,11 +21,11 @@ const figures = [
   {id:2, title:'Line Graph', href:'#', thumbnail:'assets/heart_rate_linegraph.png', image:'assets/heart_rate_linegraph.png', caption:'Bone density across age. Created by Amal Shahzad, 2026. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. <em>Data shown are simulated for educational purposes.</em>', figureType:'Graph', functionPurpose:'Explanatory', topic:'Physiology, Ecology', tags:['Line Graph','Graph','Explanatory','Physiology','Ecology']},
   {id:3, title:'Scatter Plot', href:'#', thumbnail:'assets/sleepduration_screentime_scatterplot.png', image:'assets/sleepduration_screentime_scatterplot.png', caption:'Sleep duration versus daily screen time. Created by Amal Shahzad, 2026. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. <em>Data shown are simulated for educational purposes.</em>', figureType:'Graph', functionPurpose:'Explanatory', topic:'Ecology, Genetics, Physiology', tags:['Scatter Plot','Graph','Explanatory','Ecology','Genetics','Physiology']},
   {id:4, title:'Histogram', href:'#', thumbnail:'assets/petal_length_histogram.png', image:'assets/petal_length_histogram.png', caption:'Distribution of petal length. Created by Amal Shahzad, 2026. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. <em>Data shown are simulated for educational purposes.</em>', figureType:'Graph', functionPurpose:'Explanatory', topic:'Ecology, Genetics, Physiology', tags:['Histogram','Graph','Explanatory','Ecology','Genetics','Physiology']},
-  {id:5, title:'Phylogenetic Tree', href:'#', thumbnail:'assets/thumb-placeholder.svg', figureType:'Diagram', functionPurpose:'Organizational', topic:'Ecology', tags:['Phylogenetic Tree','Diagram','Organizational','Ecology']},
-  {id:6, title:'Food Web', href:'#', thumbnail:'assets/thumb-placeholder.svg', figureType:'Diagram', functionPurpose:'Organizational', topic:'Ecology', tags:['Food Web','Diagram','Organizational','Ecology']},
-  {id:7, title:'Muscle Contraction', href:'#', thumbnail:'assets/muscle-contraction-thumb.png', figureType:'Diagram', functionPurpose:'Explanatory', topic:'Physiology', tags:['Muscle Contraction','Diagram','Explanatory','Physiology'], image:'assets/muscle-contraction-thumb.png', modalImageWidth:'70%', caption:'Muscle contraction mechanism. Modified from DataBase Center for Life Science (DBCLS), <em>Mechanism of skeletal muscle contraction</em>, 2021. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.'},
-  {id:8, title:'Negative Feedback Loop', href:'#', thumbnail:'assets/thumb-placeholder.svg', figureType:'Diagram', functionPurpose:'Explanatory', topic:'Physiology', tags:['Negative Feedback Loop','Diagram','Explanatory','Physiology','Feedback Loops']},
-  {id:9, title:'Positive Feedback Loop', href:'#', thumbnail:'assets/thumb-placeholder.svg', figureType:'Diagram', functionPurpose:'Explanatory', topic:'Physiology', tags:['Positive Feedback Loop','Diagram','Explanatory','Physiology','Feedback Loops']},
+  {id:5, title:'Phylogenetic Tree', href:'#', thumbnail:'assets/phylogenetic-tree.png', image:'assets/phylogenetic-tree.png', caption:'Phylogenetic tree illustrating evolutionary relationships among selected mammals. Created by Amal Shahzad, 2026. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Animal silhouettes sourced from <a href="https://www.phylopic.org" target="_blank" rel="noopener">PhyloPic</a> (<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0 Universal</a>).', figureType:'Diagram', functionPurpose:'Organizational', topic:'Ecology', tags:['Phylogenetic Tree','Diagram','Organizational','Ecology']},
+  {id:6, title:'Food Web', href:'#', thumbnail:'assets/food-web.png', image:'assets/food-web.png', figureType:'Diagram', functionPurpose:'Organizational', topic:'Ecology', tags:['Food Web','Diagram','Organizational','Ecology']},
+  {id:7, title:'Muscle Contraction', href:'#', thumbnail:'assets/muscle-contraction-thumb.png', figureType:'Diagram', functionPurpose:'Explanatory', topic:'Physiology', tags:['Muscle Contraction','Diagram','Explanatory','Physiology'], image:'assets/muscle-contraction-thumb.png', modalImageWidth:'70%', caption:'Muscle contraction mechanism. DataBase Center for Life Science (DBCLS), <em>Mechanism of skeletal muscle contraction</em>, 2021. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.'},
+  {id:8, title:'Negative Feedback Loop', href:'#', thumbnail:'assets/Negative-Feedback-Loops.png', image:'assets/Negative-Feedback-Loops2.png', caption:'Negative feedback loop regulating body temperature homeostasis. OpenStax, <em>Negative Feedback Loops</em>, 2016. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.', figureType:'Diagram', functionPurpose:'Explanatory', topic:'Physiology', tags:['Negative Feedback Loop','Diagram','Explanatory','Physiology','Feedback Loops']},
+  {id:9, title:'Positive Feedback Loop', href:'#', thumbnail:'assets/Pregnancy-Positive-Feedback.png', image:'assets/Pregnancy-Positive-Feedback.png', caption:'Positive feedback loop driving childbirth. OpenStax, <em>Pregnancy: Positive Feedback</em>, 2016. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.', figureType:'Diagram', functionPurpose:'Explanatory', topic:'Physiology', tags:['Positive Feedback Loop','Diagram','Explanatory','Physiology','Feedback Loops']},
   {
     id:10,
     title:'Calcium Homeostasis',
@@ -213,13 +213,12 @@ contactTopBtn.addEventListener('click', ()=>{
   document.getElementById('contact').scrollIntoView({behavior:'smooth'});
 });
 
-// Contact form submit (demo)
+// Contact form submit
 
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', (e)=>{
-  e.preventDefault();
-  alert('Thanks, your message has been recorded.');
-  contactForm.reset();
+  // Let Formspree handle the submission
+  // Form will be submitted normally via POST to Formspree endpoint
 });
 
 // Modal logic
