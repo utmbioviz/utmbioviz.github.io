@@ -38,8 +38,7 @@ const figures = [
         'Step 1 - Begin by looking at the root of the tree. This represents the population leading to the common ancestor of all the taxa at the tips of the branches. As you move from bottom to top on the diagram, you move forward in time, and evolution occurs, giving rise to many lineage branches.',
         'Step 2 - Each common ancestor is represented by a node on the diagram. Notice how after the first speciation event (when a common ancestor lineage splits into two or more daughter lineages), there are two daughter lineages: one forming an outgroup (right) and the other a clade (left).',
         'Step 3 - Notice how the outgroup branches off at the base of the tree? This shows that the platypus lineage diverged earlier than the other species and is more genetically distinct from the species within a clade.',
-        'Step 4 - Next, look at the clade on the left. Observe how there are many different lineage branches within this clade. Species within a clade are more closely related than the outgroup.',
-        '• For example, gorillas and horses are more closely related to each other than horses and platypuses, because gorillas and horses share a more recent common ancestor on the tree.',
+        'Step 4 - Next, look at the clade on the left. Observe how there are many different lineage branches within this clade. Species within a clade are more closely related than the outgroup. For example, gorillas and horses are more closely related to each other than horses and platypuses, because gorillas and horses share a more recent common ancestor on the tree.',
         'Step 5 - Determine species relatedness by identifying the most recent common ancestor (nodes). Work your way up by observing the nodes and determining where the lineage branches end up.'
       ],
       quickFacts:[
@@ -47,8 +46,8 @@ const figures = [
         'Branches represent daughter lineages of nodes.'
       ],
       misconceptionTitle:'"Species that are closer together at the tips of the branches are more closely related."',
-      misconceptionWrongHtml:'<strong>WRONG!</strong> Species that share a more recent common ancestor at a node determine species relatedness. Remember that branches can be rotated, flipping the order of the species.',
-      misconceptionDetail:'"Species on the left, like humans, are more evolved than species on the right." WRONG! The species are not arranged in a particular order (i.e., most evolved to least evolved). Remember that branches are able to rotate, changing the order of the species.'
+      misconceptionWrongHtml:'Species that share a more recent common ancestor at a node determine species relatedness. Remember that branches can be rotated, flipping the order of the species.',
+      misconceptionDetail:''
     }
   },
   {
@@ -67,19 +66,17 @@ const figures = [
       whatIsThis:'Food webs represent feeding relationships of various species within an ecosystem.',
       howToUnderstand:[
         'Step 1 - Notice how the species in this diagram are divided into ascending trophic levels: primary producers (oak tree, green shrimp plant, and grass), primary consumers (rabbit, bird, and squirrel), secondary consumers (fox and snake), and tertiary consumers (lion, owl, and tiger).',
-        'Step 2 - Also, notice how each species in this food web (excluding primary producers) acts as both prey and predator because they have arrows pointing to them and arrows pointing away from them. In this diagram, all the arrows are pointing upwards, meaning that energy is flowing from the food item to the consumer.',
-        '• For example, the oak tree is being consumed by the rabbit, and the rabbit is being consumed by the lion.',
+        'Step 2 - Also, notice how each species in this food web (excluding primary producers) acts as both prey and predator because they have arrows pointing to them and arrows pointing away from them. In this diagram, all the arrows are pointing upwards, meaning that energy is flowing from the food item to the consumer. For example, the oak tree is being consumed by the rabbit, and the rabbit is being consumed by the lion.',
         'Step 3 - Begin by looking at the primary producers. Although food webs do not necessarily have starting points, energy flow in food webs can be interpreted as flowing from primary producers to tertiary consumers eventually.',
-        'Step 4 - Next, look at how energy is flowing to and from the primary consumers. Unlike a food chain, species within a food web can consume more than one prey and be consumed by more than one predator.',
-        '• For instance, the bird consumes the green shrimp plant and grass, and is consumed by the fox, snake, and owl.',
+        'Step 4 - Next, look at how energy is flowing to and from the primary consumers. Unlike a food chain, species within a food web can consume more than one prey and be consumed by more than one predator. For instance, the bird consumes the green shrimp plant and grass, and is consumed by the fox, snake, and owl.',
         'Step 5 - Continue observing energy flow between trophic levels by following the arrows to see where they end up.'
       ],
       quickFacts:[
         'Upward arrows symbolize the energy flow from food item to consumer.'
       ],
-      misconceptionTitle:'"You can infer the strength of the relationship between the prey and predator by the length of the arrows. For example, foxes are preyed on by both lions and owls, but the shorter arrow pointing from the fox towards the lion might allude to foxes being preyed on by lions more than owls."',
-      misconceptionWrongHtml:'<strong>WRONG!</strong> The strength of a relationship between species is determined by the thickness of an arrow. In this figure, you cannot infer the relationship between species by the length of the arrows.',
-      misconceptionDetail:'The length of arrows in a food web does not indicate the strength of a predator-prey relationship.'
+      misconceptionTitle:'"Plants do not have an energy source in this food web."',
+      misconceptionWrongHtml:'',
+      misconceptionDetail:'Even though it is not depicted here, plants use energy sources, like sunlight and dead organic matter, to photosynthesize and grow.'
     }
   },
   {id:7, title:'Process Diagram', href:'#', thumbnail:'assets/muscle-contraction-thumb.png', figureType:'Diagram', functionPurpose:'Explanatory', topic:'Physiology', tags:['Process Diagram','Diagram','Explanatory','Physiology'], image:'assets/muscle-contraction-thumb.png', modalImageWidth:'70%', caption:'Muscle contraction mechanism. DataBase Center for Life Science (DBCLS), <em>Mechanism of skeletal muscle contraction</em>, 2021. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.'},
@@ -98,9 +95,7 @@ const figures = [
     modalContent:{
       whatIsThis:'This is a diagram illustrating calcium homeostasis, a fundamental regulatory mechanism in maintaining healthy calcium levels in the body.',
       howToUnderstand:[
-        'Step 1 - Notice how this diagram is divided into two main sections, which represent deviations from the normal calcium level of 10 mg/dL (the baseline separating the two):',
-        '• The top half describes the pathway to regulate increased Ca²⁺ levels (+10 mg/dL).',
-        '• The bottom half describes the pathway to regulate decreased Ca²⁺ levels (-10 mg/dL).',
+        'Step 1 - Notice how this diagram is divided into two main sections, which represent deviations from the normal calcium level of 10 mg/dL (the baseline separating the two). The top half describes the pathway to regulate increased Ca²⁺ levels (+10 mg/dL). The bottom half describes the pathway to regulate decreased Ca²⁺ levels (-10 mg/dL).',
         'Step 2 - Start from either pathway in the middle. For example, if I start from “decreased Ca²⁺ level” in the middle, my next step is to follow the thick, hot pink arrow that points to the light orange box. This arrow may be interpreted as a signal response to return calcium levels to homeostasis when a change is observed.',
         'Step 3 - Then, follow the thinner black arrow, which points to another set of boxes. These arrows represent how one step triggers the next step. In our example, the release of PTH causes a chain reaction of calcium absorption in the kidneys and small intestine.',
         'Step 4 - Another black arrow coming from the set of boxes points to another box that describes the final event in the regulatory pathway. In our example, the arrow shows how the release of calcium and its subsequent absorption/reabsorption increases Ca²⁺ level in blood until it is returned to homeostasis or the normal level.'
@@ -347,11 +342,30 @@ function setHowToUnderstand(items) {
   });
 }
 
+function stripWrongLabel(text) {
+  if (typeof text !== 'string') return '';
+
+  return text
+    .replace(/\bWRONG!?\b\s*/gi, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
+function stripWrongLabelHtml(html) {
+  if (typeof html !== 'string') return '';
+
+  return html
+    .replace(/<strong>\s*WRONG!\s*<\/strong>\s*/gi, '')
+    .replace(/\bWRONG!?\b\s*/gi, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
 function setMisconWrong(text, html) {
   if (!modalMisconWrong) return;
 
   if (html) {
-    modalMisconWrong.innerHTML = html;
+    modalMisconWrong.innerHTML = stripWrongLabelHtml(html);
     return;
   }
 
@@ -360,14 +374,7 @@ function setMisconWrong(text, html) {
     return;
   }
 
-  const trimmed = text.trim();
-  if (/^WRONG!/i.test(trimmed)) {
-    const rest = trimmed.replace(/^WRONG!\s*/i, '');
-    modalMisconWrong.innerHTML = `<strong>WRONG!</strong>${rest ? ` ${rest}` : ''}`;
-    return;
-  }
-
-  modalMisconWrong.textContent = trimmed;
+  modalMisconWrong.textContent = stripWrongLabel(text);
 }
 
 function getResolvedModalContent(figure) {
@@ -446,13 +453,13 @@ function openModal(card) {
   setQuickFacts(modalContent.quickFacts);
 
   if (modalMisconTitle) {
-    modalMisconTitle.textContent = modalContent.misconceptionTitle;
+    modalMisconTitle.textContent = stripWrongLabel(modalContent.misconceptionTitle);
   }
 
   setMisconWrong(modalContent.misconceptionWrong, modalContent.misconceptionWrongHtml);
 
   if (modalMisconDetail) {
-    modalMisconDetail.textContent = modalContent.misconceptionDetail;
+    modalMisconDetail.textContent = stripWrongLabel(modalContent.misconceptionDetail);
   }
 
   // Show modal with fade in animation
@@ -601,22 +608,22 @@ const hotspotConfigs = {
         key: 'myosin-head',
         title: 'Myosin Head',
         text: 'The myosin head binds to actin and generates force during the power stroke.',
-        top: '7%',
-        left: '40%'
+        top: '6%',
+        left: '40.5%'
       },
       {
         key: 'actin',
         title: 'Actin',
         text: 'Actin is the thin filament that myosin binds and pulls to produce contraction.',
-        top: '1.5%',
-        left: '67%'
+        top: '1%',
+        left: '66.5%'
       },
       {
         key: 'myosin',
         title: 'Myosin',
         text: 'Myosin is the motor protein on the thick filament that converts ATP energy into movement.',
-        top: '14%',
-        left: '67%'
+        top: '13%',
+        left: '66.5%'
       }
     ]
   },

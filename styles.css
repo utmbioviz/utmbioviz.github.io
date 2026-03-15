@@ -1405,24 +1405,24 @@ a:hover{
 
 /* Specific hotspot positions for phylogenetic tree */
 .clade-hotspot {
-  top: 70%;
-  left: 44%;
+  top: 71%;
+  left: 43.5%;
 }
 
 .outgroup-hotspot {
-  top: 95%;
-  left: 88.8%;
+  top: 95.5%;
+  left: 88.6%;
 }
 
 /* Specific hotspot position for bar graph */
 .bargraph-errorbar-hotspot {
-  top: 47%;
-  left: 20.75%;
+  top: 46%;
+  left: 20.1%;
 }
 
 /* Specific hotspot position for scatter plot */
 .scatter-bestfit-hotspot {
-  top: 25%;
+  top: 24%;
   left: 30%;
 }
 
@@ -1524,75 +1524,75 @@ a:hover{
 
 /* Clade highlight area - covers the left subtree */
 .clade-highlight {
-  top: 0%;
-  left: 3%;
-  width: 76%;
-  height: 70%;
+  top: -1%;
+  left: 2.25%;
+  width: 77.5%;
+  height: 71.5%;
 }
 
 /* Outgroup highlight area - covers the platypus branch */
 .outgroup-highlight {
-  top: 0%;
-  left: 82.65%;
-  width: 14.25%;
-  height: 95%;
+  top: -1%;
+  left: 82.3%;
+  width: 15.5%;
+  height: 96%;
 }
 
 /* Bar graph highlight area - first error bar */
 .bargraph-errorbar-highlight {
-  top: 52.7%;
-  left: 19.8%;
-  width: 4.1%;
-  height: 8%;
+  top: 51%;
+  left: 19.2%;
+  width: 4.5%;
+  height: 7.8%;
 }
 
 /* Scatter plot highlight area - line of best fit */
 .scatter-bestfit-highlight {
-  top: 31%;
-  left: 10%;
-  width: 86.5%;
+  top: 28%;
+  left: 8%;
+  width: 90.5%;
   height: 4.5%;
-  transform: rotate(16deg);
+  transform: rotate(17deg);
   transform-origin: center;
 }
 
 /* Calcium homeostasis highlight areas - arrows */
 .calcium-pink-arrow-highlight {
-  top: 38%;
-  left: 34.2%;
-  width: 8%;
-  height: 5.5%;
-  transform: rotate(35.5deg);
+  top: 37.85%;
+  left: 34.18%;
+  width: 7.7%;
+  height: 5%;
+  transform: rotate(35.15deg);
   transform-origin: center;
 }
 
 .calcium-black-arrow-highlight {
-  top: 25%;
-  left: 65%;
-  width: 8%;
-  height: 4%;
-  transform: rotate(40deg);
+  top: 26%;
+  left: 67%;
+  width: 5.5%;
+  height: 4.5%;
+  transform: rotate(39.5deg);
   transform-origin: center;
 }
 
 /* Muscle contraction highlight areas */
 .myosin-head-highlight {
-  top: 3%;
-  left: 43.5%;
-  width: 5%;
-  height: 9%;
+  top: 4%;
+  left: 43.7%;
+  width: 4%;
+  height: 7%;
 }
 
 .actin-highlight {
   top: 0%;
   left: 34.5%;
   width: 31.5%;
-  height: 7%;
+  height: 6.5%;
 }
 
 .myosin-highlight {
-  top: 12.5%;
+  top: 12.9%;
   left: 34.5%;
   width: 31.5%;
-  height: 7%;
+  height: 6%;
 }
