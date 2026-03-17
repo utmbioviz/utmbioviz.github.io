@@ -1288,19 +1288,19 @@ a:hover{
 
 /* Specific hotspot positions for phylogenetic tree */
 .clade-hotspot {
-  top: 71%;
-  left: 43.5%;
+  top: 71.5%;
+  left: 42.7%;
 }
 
 .outgroup-hotspot {
-  top: 95.5%;
-  left: 88.6%;
+  top: 96%;
+  left: 91%;
 }
 
 /* Specific hotspot position for bar graph */
 .bargraph-errorbar-hotspot {
-  top: 46%;
-  left: 20.1%;
+  top: 45%;
+  left: 18.1%;
 }
 
 /* Specific hotspot position for scatter plot */
@@ -1312,12 +1312,12 @@ a:hover{
 /* Specific hotspot positions for calcium homeostasis */
 .calcium-pink-arrow-hotspot {
   top: 34.5%;
-  left: 39%;
+  left: 37.5%;
 }
 
 .calcium-black-arrow-hotspot {
-  top: 29%;
-  left: 66%;
+  top: 28%;
+  left: 66.7%;
 }
 
 .calcium-pink-arrow-hotspot .hotspot-info {
@@ -1358,6 +1358,22 @@ a:hover{
 /* Hotspot-specific card width override */
 .outgroup-hotspot .hotspot-info {
   max-width: 224.5px;
+}
+
+/* Specific hotspot positions for process diagram (muscle contraction) */
+.myosin-head-hotspot {
+  top: 6%;
+  left: 36%;
+}
+
+.actin-hotspot {
+  top: 0.8%;
+  left: 73.5%;
+}
+
+.myosin-hotspot {
+  top: 13%;
+  left: 73.5%;
 }
 
 /* Muscle contraction card placement */
@@ -1408,23 +1424,23 @@ a:hover{
 /* Clade highlight area - covers the left subtree */
 .clade-highlight {
   top: -1%;
-  left: 2.25%;
-  width: 77.5%;
+  left: -1%;
+  width: 83%;
   height: 71.5%;
 }
 
 /* Outgroup highlight area - covers the platypus branch */
 .outgroup-highlight {
   top: -1%;
-  left: 82.3%;
-  width: 15.5%;
+  left: 84.2%;
+  width: 16.5%;
   height: 96%;
 }
 
 /* Bar graph highlight area - first error bar */
 .bargraph-errorbar-highlight {
   top: 51%;
-  left: 19.2%;
+  left: 17.4%;
   width: 4.5%;
   height: 7.8%;
 }
@@ -1432,8 +1448,8 @@ a:hover{
 /* Scatter plot highlight area - line of best fit */
 .scatter-bestfit-highlight {
   top: 28%;
-  left: 8%;
-  width: 90.5%;
+  left: 5.35%;
+  width: 96%;
   height: 4.5%;
   transform: rotate(17deg);
   transform-origin: center;
@@ -1441,9 +1457,9 @@ a:hover{
 
 /* Calcium homeostasis highlight areas - arrows */
 .calcium-pink-arrow-highlight {
-  top: 37.85%;
-  left: 34.18%;
-  width: 7.7%;
+  top: 38%;
+  left: 31.8%;
+  width: 9%;
   height: 5%;
   transform: rotate(35.15deg);
   transform-origin: center;
@@ -1451,8 +1467,8 @@ a:hover{
 
 .calcium-black-arrow-highlight {
   top: 26%;
-  left: 67%;
-  width: 5.5%;
+  left: 70%;
+  width: 6%;
   height: 4.5%;
   transform: rotate(39.5deg);
   transform-origin: center;
@@ -1461,21 +1477,21 @@ a:hover{
 /* Muscle contraction highlight areas */
 .myosin-head-highlight {
   top: 4%;
-  left: 43.7%;
-  width: 4%;
+  left: 41.5%;
+  width: 4.7%;
   height: 7%;
 }
 
 .actin-highlight {
   top: 0%;
-  left: 34.5%;
-  width: 31.5%;
+  left: 27.5%;
+  width: 45.5%;
   height: 6.5%;
 }
 
 .myosin-highlight {
   top: 12.9%;
-  left: 34.5%;
-  width: 31.5%;
+  left: 27.5%;
+  width: 45.5%;
   height: 6%;
 }

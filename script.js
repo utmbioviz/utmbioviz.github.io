@@ -632,25 +632,22 @@ const hotspotConfigs = {
     ],
     hotspots: [
       {
+        className: 'myosin-head-hotspot',
         key: 'myosin-head',
         title: 'Myosin Head',
-        text: 'The myosin head binds to actin and generates force during the power stroke.',
-        top: '6%',
-        left: '40.5%'
+        text: 'The myosin head binds to actin and generates force during the power stroke.'
       },
       {
+        className: 'actin-hotspot',
         key: 'actin',
         title: 'Actin',
-        text: 'Actin is the thin filament that myosin binds and pulls to produce contraction.',
-        top: '1%',
-        left: '66.5%'
+        text: 'Actin is the thin filament that myosin binds and pulls to produce contraction.'
       },
       {
+        className: 'myosin-hotspot',
         key: 'myosin',
         title: 'Myosin',
-        text: 'Myosin is the motor protein on the thick filament that converts ATP energy into movement.',
-        top: '13%',
-        left: '66.5%'
+        text: 'Myosin is the motor protein on the thick filament that converts ATP energy into movement.'
       }
     ]
   },
