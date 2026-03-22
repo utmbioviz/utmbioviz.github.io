@@ -65,7 +65,7 @@ const figures = [
   },
   {id:4, title:'Histogram', href:'#', thumbnail:'assets/petal_length_histogram.png', image:'assets/petal_length_histogram.png', caption:'Distribution of petal length. Created by Amal Shahzad, 2026. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. <em>Data shown are simulated for educational purposes.</em>', figureType:'Graph', functionPurpose:'Explanatory', topic:'Ecology, Genetics, Physiology', tags:['Histogram','Graph','Explanatory','Ecology','Genetics','Physiology']},
   {id:11, title:'Heat Map', href:'#', thumbnail:'assets/heatmap.png', image:'assets/heatmap.png', caption:' Heat map showing average monthly rainfall (mm) across different habitats, where darker colors represent higher rainfall and lighter colors represent lower rainfall. Created by Amal Shahzad, 2026. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. <em>Data shown are simulated for educational purposes.</em>', figureType:'Graph', functionPurpose:'Explanatory', topic:'Ecology, Physiology, Genetics', tags:['Heat Map','Graph','Explanatory','Ecology','Physiology','Genetics']},
-  {id:12, title:'Box and Whisker Plot', href:'#', thumbnail:'assets/boxplot.png', image:'assets/boxplot.png', caption:'Box plot. Created by Amal Shahzad, 2026. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. <em>Data shown are simulated for educational purposes.</em>', figureType:'Graph', functionPurpose:'Explanatory', topic:'Ecology, Physiology, Genetics', tags:['Box Plot','Graph','Explanatory','Ecology','Physiology','Genetics']},
+  {id:12, title:'Box and Whisker Plot', href:'#', thumbnail:'assets/boxplot.png', image:'assets/boxplot.png', caption:'Box-and-whisker plot showing plant height (cm) under different light conditions. Created by Amal Shahzad, 2026. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. <em>Data shown are simulated for educational purposes.</em>', figureType:'Graph', functionPurpose:'Explanatory', topic:'Ecology, Physiology, Genetics', tags:['Box Plot','Graph','Explanatory','Ecology','Physiology','Genetics']},
   {
     id:5,
     title:'Phylogenetic Tree',
@@ -464,14 +464,15 @@ function openModal(card) {
   const figureId = card.getAttribute('data-figure-id');
   const figure = figures.find(f => String(f.id) === String(figureId));
   const hasHotspots = Boolean(hotspotConfigs[String(figureId)]);
+  const showHotspotInstruction = hasHotspots || String(figureId) === '12';
 
   if (!figure) return;
 
   if (modalHotspotInstruction) {
-    modalHotspotInstruction.style.display = hasHotspots ? 'block' : 'none';
+    modalHotspotInstruction.style.display = showHotspotInstruction ? 'block' : 'none';
   }
 
-  modal.classList.toggle('has-hotspot-instruction', hasHotspots);
+  modal.classList.toggle('has-hotspot-instruction', showHotspotInstruction);
 
   // Pill: FigureType | Topic | FunctionPurpose
   // Show all topics
@@ -695,6 +696,75 @@ const hotspotConfigs = {
         key: 'black-arrow',
         title: 'Black Arrow',
         text: 'This arrow traces the step-by-step cause-and-effect flow through the pathway.'
+      }
+    ]
+  },
+  '12': {
+    overlays: [
+      { className: 'boxplot-min-highlight', key: 'boxplot-minimum' },
+      { className: 'boxplot-q1-highlight', key: 'boxplot-q1' },
+      { className: 'boxplot-median-highlight', key: 'boxplot-median' },
+      { className: 'boxplot-q3-highlight', key: 'boxplot-q3' },
+      { className: 'boxplot-max-highlight', key: 'boxplot-maximum' },
+      { className: 'boxplot-outlier-highlight', key: 'boxplot-outlier' },
+      { className: 'boxplot-iqr-highlight', key: 'boxplot-iqr' }
+    ],
+    hotspots: [
+      {
+        className: 'boxplot-min-hotspot',
+        key: 'boxplot-minimum',
+        title: 'Minimum',
+        top: '49%',
+        left: '47%',
+        text: 'The minimum is the lowest value that is still considered part of the main dataset. It does not include outliers.'
+      },
+      {
+        className: 'boxplot-q1-hotspot',
+        key: 'boxplot-q1',
+        title: 'First Quartile (Q1)',
+        top: '35.5%',
+        left: '52%',
+        text: 'The first quartile marks the value below which about 25% of the data fall. It forms the lower edge of the box and shows where the lower quarter of the data ends.'
+      },
+      {
+        className: 'boxplot-median-hotspot',
+        key: 'boxplot-median',
+        title: 'Median',
+        top: '26.5%',
+        left: '52%',
+        text: 'The median is the middle value of the dataset. Half of the observations are above it and half are below it. It is shown as the horizontal line inside the box.'
+      },
+      {
+        className: 'boxplot-q3-hotspot',
+        key: 'boxplot-q3',
+        title: 'Third Quartile (Q3)',
+        top: '16%',
+        left: '52%',
+        text: 'The third quartile marks the value below which about 75% of the data fall. It forms the top edge of the box and shows where the upper quarter of the data begins.'
+      },
+      {
+        className: 'boxplot-max-hotspot',
+        key: 'boxplot-maximum',
+        title: 'Maximum',
+        top: '5%',
+        left: '47%',
+        text: 'The maximum is the highest value that is still considered part of the main dataset. It does not include outliers.'
+      },
+      {
+        className: 'boxplot-iqr-hotspot',
+        key: 'boxplot-iqr',
+        title: 'Interquartile Range (IQR)',
+        top: '26%',
+        left: '31.5%',
+        text: 'The interquartile range is the range of the middle 50% of the data. It is the distance between the first quartile (Q1) and the third quartile (Q3), shown by the height of the box.'
+      },
+      {
+        className: 'boxplot-outlier-hotspot',
+        key: 'boxplot-outlier',
+        title: 'Outlier',
+        top: '74.1%',
+        left: '45.5%',
+        text: 'Outliers are values that fall much higher or lower than the rest of the data. They appear as individual points outside the whiskers and may represent unusual observations or variation.'
       }
     ]
   }

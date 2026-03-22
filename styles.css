@@ -1712,6 +1712,20 @@ a:hover{
   max-width: 220px;
 }
 
+/* Box-and-whisker plot hotspot positions are set in JS; these rules control tooltip placement */
+.boxplot-min-hotspot .hotspot-info,
+.boxplot-q1-hotspot .hotspot-info,
+.boxplot-median-hotspot .hotspot-info,
+.boxplot-q3-hotspot .hotspot-info,
+.boxplot-max-hotspot .hotspot-info,
+.boxplot-outlier-hotspot .hotspot-info {
+  top: 50%;
+  left: calc(100% + 10px);
+  right: auto;
+  transform: translateY(-50%);
+  max-width: 330px;
+}
+
 /* Highlight overlays for visual feedback */
 .highlight-overlay {
   position: absolute;
@@ -1801,4 +1815,63 @@ a:hover{
   left: 27.5%;
   width: 45.5%;
   height: 6%;
+}
+
+/* Box-and-whisker highlight areas (Full Sun box) */
+.boxplot-min-highlight {
+  top: 49.7%;
+  left: 40.5%;
+  width: 5.5%;
+  height: 3%;
+}
+
+.boxplot-q1-highlight {
+  top: 37%;
+  left: 35.7%;
+  width: 15%;
+  height: 2.5%;
+}
+
+.boxplot-median-highlight {
+  top: 27.3%;
+  left: 35.7%;
+  width: 15%;
+  height: 3%;
+}
+
+.boxplot-q3-highlight {
+  top: 17%;
+  left: 35.7%;
+  width: 15%;
+  height: 2.5%;
+}
+
+.boxplot-max-highlight {
+  top: 6%;
+  left: 40.5%;
+  width: 5.5%;
+  height: 3%;
+}
+
+.boxplot-outlier-highlight {
+  top: 74.6%;
+  left: 41.7%;
+  width: 3%;
+  height: 3.5%;
+}
+
+.boxplot-iqr-hotspot .hotspot-info {
+  top: 50%;
+  right: calc(100% + 10px);
+  left: auto;
+  transform: translateY(-50%);
+  max-width: 230px;
+}
+
+/* IQR highlight — the full box from Q3 to Q1 */
+.boxplot-iqr-highlight {
+  top: 17%;
+  left: 35.7%;
+  width: 15%;
+  height: 22.5%;
 }
